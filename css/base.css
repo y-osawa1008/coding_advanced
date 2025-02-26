@@ -1,0 +1,425 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+/*header: lightgray;
+footer: darkgray;
+body
+    全体: #FFEFD5
+    新型コロナウイルスに対する取り組み部分 : #FFC7AF
+    アドレス部分: black*/
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	background: #FFEFD5;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* header */
+#header {
+	display: flex;
+	justify-content: space-between;
+	padding: 12px 30px;
+	background-color: lightgray;
+}
+
+.header-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header h1 {
+	font-size: 30px;
+}
+
+#global-nav {  
+	display: flex;
+	align-items: center;
+}
+
+#global-nav ul  {
+	display: flex;
+	list-style: none;
+}
+
+#global-nav ul li a {
+	margin-right: 20px;
+	color: gray;
+	text-decoration: none;
+}
+
+#global-nav ul li a:hover {
+	color: black;
+}
+
+/* ハンバーガーメニュー */
+
+.hamburger {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 65px;
+	height: 50px;
+	padding: 10px;
+	cursor: pointer;
+	border: 1px solid orange;
+}
+
+.hamburger span {
+	width: 100%;
+	height: 4px;
+	background-color: gray;
+	border-radius: 2px;
+}
+
+/* swiper */
+.mySwiper .swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center; 
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mySwiper .swiper-slide img {
+	width: 100%; /*横幅いっぱい */
+	height: 400px; /* 統一したい高さ */
+	object-fit: cover; /* 画像のアスペクト比を崩さずに埋める */
+}
+
+/* info */
+.info {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.info h1 {
+	font-size: 32px;
+}
+
+.info dt {
+	cursor: pointer;
+	padding: 10px;
+	margin-top: 5px;
+	text-align: left;
+	font-size: 26px;
+	background-color: #FFC7AF;
+}
+
+.info dt i {
+	font-size: 18px;
+}
+
+.info dd {
+	display: none;
+	text-align: left;
+	margin-left: 0;
+	margin-bottom: 20px;
+}
+
+/* menu */
+.menu {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 150px;
+}
+
+.menu .section-content1 h2,
+.menu .section-content2 h2,
+.menu .section-content3 h2 {
+	font-size: 32px;
+	font-weight: bold;
+	margin-top: 20px;
+	padding-left: 5px;	
+}
+
+.menu .section-content1 .content1-wrapper,
+.menu .section-content2 .content2-wrapper,
+.menu .section-content3 .content3-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.menu .section-content1 .content1-wrapper img,
+.menu .section-content2 .content2-wrapper img,
+.menu .section-content3 .content3-wrapper img {
+	width: 530px;
+	height: 400px;
+	object-fit: cover;
+}
+
+.menu .section-content1 .content1-wrapper p,
+.menu .section-content2 .content2-wrapper p,
+.menu .section-content3 .content3-wrapper p {
+	font-size: 25px;
+}
+
+.address {
+	margin: 50px 5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	background-color: black;
+}
+
+.address-text {
+	color: white;
+	padding-top: 40px;
+	padding-bottom: 100px;
+	width: 100%;
+	height: 100%;
+}
+
+.address-text h2 {
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.address-text p {
+	font-size: 18px;
+	margin: 5px 0 0 5px;
+}
+
+.address-image {
+	width: 100%;
+	height: 100%;
+}
+
+.address-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 350px;
+}
+
+.shop-list h2{
+	font-size: 36px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.shops {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+
+.shop {
+	width: 200px;
+}
+
+.shop img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.shop p {
+	font-size: 14px;
+	white-space: nowrap;
+	margin-bottom: 50px;
+
+}
+
+.shop p i {
+	font-size: 10px;
+}
+
+.footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	background-color: darkgray;
+}
+
+.footer p {
+	cursor: pointer;
+}
+
+.fade-in {
+	opacity: 0;
+	transition: opacity 0.6s ease;
+}
+
+.fade-in.show {
+	opacity: 1;
+}
+
+/* sp */
+
+@media screen and (max-width: 600px) {
+	#header {
+		display: flex;
+		flex-direction: column;
+		padding-left: 0;
+	}
+
+	#global-nav ul {
+		display: none;
+		flex-direction: column;
+	}
+
+	#global-nav ul li  {
+		padding-top: 10px;
+	}
+
+	#global-nav.open {
+		display: block;
+	}
+
+	#global-nav.open ul {
+		display: flex;
+	}
+
+	.hamburger {
+		display: flex; /* SP時のみ表示 */
+	}
+
+	/* ハンバーガーアイコンのアニメーション */
+	.hamburger.open span:nth-child(1) {
+		transform: translateY(9px) rotate(45deg);
+	}
+	
+	.hamburger.open span:nth-child(2) {
+		opacity: 0;
+	}
+	
+	.hamburger.open span:nth-child(3) {
+		transform: translateY(-9px) rotate(-45deg);
+	}
+
+	#global-nav {
+		order: 1;
+	}
+	
+	.header-top {
+		flex-direction: row;
+    }
+
+	.mySwiper  {
+		margin-top: 25px;
+		width: 90%;
+		height: 400px;
+	}
+
+	.mySwiper .swiper-slide img {
+		height: 400px;
+	}
+	
+	.info {
+		width: 100%;
+		padding: 0 10px;
+	}
+
+	.menu {
+		width: 90%;
+		/* margin-bottom: -200px; */
+	}
+
+	.menu .section-content1 .content1-wrapper,
+	.menu .section-content2 .content2-wrapper,
+	.menu .section-content3 .content3-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.menu .section-content1 .content1-wrapper img,
+	.menu .section-content2 .content2-wrapper img,
+	.menu .section-content3 .content3-wrapper img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.address {
+		flex-direction: column;
+		align-items: center;
+		margin: 120px 2%;
+	}
+
+	.address-text {
+		width: 100%;
+		height: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.address-text p {
+		font-size: 16px;
+	}
+
+	.address-image {
+		width: 100%;
+		height: 100%;
+	}
+
+	.address-image img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.shop-list {
+		display: none;
+	}
+
+	.footer {
+		width: 100%;
+		height: 100%;
+	}
+
+	.fade-in {
+		opacity: 0;
+		transition: opacity 0.6s ease;
+	}
+
+	.fade-in.show {
+		opacity: 1;
+	}
+}
